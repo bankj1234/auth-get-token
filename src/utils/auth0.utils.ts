@@ -7,7 +7,7 @@ const getAuth0 = async () => {
       clientId: process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID!,
       cacheLocation: "localstorage",
       authorizationParams: {
-        redirect_uri: window.location.origin + '/signin-success'
+        redirect_uri: process.env.NEXT_PUBLIC_AUTH0_REDIRECT_URI || 'http://localhost:3000/signin-success'
       }
     })
     return auth0
