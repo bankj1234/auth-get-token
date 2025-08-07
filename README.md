@@ -25,6 +25,7 @@ npm install
 ```env
 NEXT_PUBLIC_AUTH0_DOMAIN=your-auth0-domain.auth0.com
 NEXT_PUBLIC_AUTH0_CLIENT_ID=your-auth0-client-id
+NEXT_AUTH0_REDIRECT_URI=http://localhost:3000/signin-success
 ```
 
 ### 4. รันโปรเจค
