@@ -7,7 +7,9 @@ const getAuth0 = async () => {
       clientId: process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID!,
       cacheLocation: "localstorage",
       authorizationParams: {
-        redirect_uri: process.env.NEXT_PUBLIC_AUTH0_REDIRECT_URI || 'http://localhost:3000/signin-success'
+        redirect_uri: process.env.NEXT_PUBLIC_AUTH0_REDIRECT_URI || 'http://localhost:3000/signin-success',
+        audience: process.env.NEXT_PUBLIC_AUTH0_AUDIENCE,
+        scope: process.env.NEXT_PUBLIC_AUTH0_SCOPE || 'openid profile email'
       }
     })
     return auth0
